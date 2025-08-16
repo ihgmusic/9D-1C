@@ -1,0 +1,274 @@
+/* Estilos Base y generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: linear-gradient(135deg, #d8d8d8 0%, #f8e6e6 100%);
+    color: #292929;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Encabezado del curso */
+header {
+    background: linear-gradient(135deg, #1d61f5ec, #62c0dd);
+    color: white;
+    padding: 1rem 1.0rem;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.0rem;
+    z-index: 20;
+}
+
+.back-link:hover {
+    transform: translateX(-5px);
+}
+
+.header-content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 strong {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+/* Nuevo contenedor del cuadro de información */
+.course-details {
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    padding: 15px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.course-details h2, .course-details p {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.course-details h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.course-details p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Contenido principal */
+main {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 2rem 0;
+    position: relative;
+    z-index: 10;
+}
+
+.comunicados-nav {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.comunicados-nav h3 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.comunicados-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.comunicados-nav a {
+    text-decoration: none;
+    color: #3a7bd5;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.2s, transform 0.2s;
+    display: block;
+    padding: 5px;
+}
+
+.comunicados-nav a:hover {
+    color: #00d2ff;
+    transform: translateX(5px);
+}
+
+.post-container {
+    padding: 0 15px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+}
+
+.post-header {
+    border-bottom: 2px solid #f0f0f0;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+}
+
+/* Reglas de estilo para el nuevo post */
+.post .post-header h4 {
+    margin: 0 0 5px 0;
+    color: #007bff;
+    font-size: 1.4rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.post-date {
+    font-size: 0.9em;
+    color: #777;
+    display: block;
+    margin-top: 5px;
+}
+
+.post-content p {
+    margin: 0 0 10px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* Pie de página */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    padding: 5px;
+    line-height: 1.2;
+}
+
+/* Adaptación a pantallas grandes */
+@media (min-width: 768px) {
+    /* Las siguientes reglas se mantuvieron por si necesitas usarlas en el futuro */
+    .columnas-pautas, .columnas-ganadores {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .columnas-pautas div, .columnas-ganadores div {
+        flex: 1;
+    }
+}
+
+/* Media Queries para pantallas más grandes */
+@media (min-width: 992px) {
+    header h1 strong {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-content {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .course-details {
+        position: static;
+        width: 100%;
+        transform: none;
+    }
+    header h1 strong {
+        font-size: 2rem;
+    }
+}
+
+/* Estilos para el nuevo icono de Volver */
+.back-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+    fill: white;
+}
+.to-top {
+    background: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    text-decoration: none;
+    font-size: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.to-top:hover {
+    background-color: #0056b3;
+}

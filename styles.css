@@ -1,0 +1,190 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: linear-gradient(135deg, #3a7bd5, #00d2ff);
+    color: white;
+    padding: 1rem 1rem;
+    text-align: center;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;x
+    align-items: center;
+}
+
+.titulo-completo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+}
+
+.logo-contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid red;
+    background-color: #FFFDD0;
+    padding: 5px;
+    position: absolute;
+    left: 50px;
+}
+
+.logo {
+    max-width: 80%;
+    height: auto;
+}
+
+.titulos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1.2;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin: 0;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+    line-height: 1.2;
+}
+
+/* Estilos para la sección de bienvenida */
+.welcome-message {
+    /* El max-width se mantiene igual para que ocupe todo el espacio que pueda */
+    max-width: 1100px;
+    /* Reducimos el margen superior e inferior */
+    margin: 10px auto; 
+    /* Reducimos el padding para que encaje mejor */
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    line-height: 0.5;
+}
+
+.welcome-message h2 {
+    font-size: 1.6rem;
+    color: #2c3e50;
+    /* Eliminamos el margen inferior para pegar el texto */
+    margin-bottom: 0;
+}
+
+.welcome-message p {
+    font-size: 1rem;
+    line-height: 1.3;
+    color: #555;
+    /* Eliminamos el margen superior para pegar el texto */
+    margin-top: 0;
+}
+
+main.cursos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.curso-icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 10px;
+    text-decoration: none;
+    color: #2c3e50;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.curso-icono:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.curso-icono img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: block;
+}
+
+.curso-icono span {
+    text-align: center;
+    font-weight: 600;
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+@media (min-width: 900px) {
+    main.cursos-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .titulo-completo {
+        flex-direction: column;
+        gap: 5px;
+        position: static;
+    }
+    .logo-contenedor {
+        position: static;
+        width: 50px;
+        height: 50px;
+    }
+    .titulos {
+        align-items: center;
+    }
+    header h1 {
+        font-size: 1.5rem;
+    }
+    header h2 {
+        font-size: 1.2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    main.cursos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        padding: 10px;
+        gap: 10px;
+    }
+    .curso-icono img {
+        max-width: 60px;
+    }
+}
